@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first-view.component.css']
 })
 export class FirstViewComponent implements OnInit {
-
+  boolvar:boolean = true;
   constructor() { }
 
   ngOnInit() {
   }
+  public Generate(){
+  this.boolvar = false;
+
+
+}
+
 
 }

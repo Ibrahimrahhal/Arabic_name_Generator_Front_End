@@ -20,10 +20,12 @@ height: 60px;
 border-radius: 5px;
 font-family: "Open Sans";
 color: #ffffff;
+text-decoration: none;
 background-color: #121212;
-transition: all 0.2s;
+transition: all 0.3s ease-out;
 cursor: pointer;
+margin-top: 10px;
  }
  a:hover{
-   width: 275px;
+   width: 320px;
  }
