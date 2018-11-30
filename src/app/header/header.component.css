@@ -1,0 +1,33 @@
+header {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #121212;
+  align-items: center;
+}
+
+h1 {
+font-family: "Open Sans";
+color: #ffffff;
+display: inline-block;
+}
+nav{
+width: 40%;
+display: flex;
+justify-content: space-around;
+
+}
+a, a:link , a:active , a:visited {
+color: #ffffff;
+font-family: "Open Sans";
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+border: solid 1px #121212;
+padding: 3px;
+}
+
+a:hover {
+border-bottom: solid 1px #ffffff;
+transform: scale(1.2);
+}
