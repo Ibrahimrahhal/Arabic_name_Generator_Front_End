@@ -25,6 +25,7 @@ cursor: pointer;
 transition: all 0.2s ease-out;
 border: solid 1px #121212;
 padding: 3px;
+text-decoration: none;
 }
 
 a:hover {
