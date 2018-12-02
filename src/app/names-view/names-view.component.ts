@@ -5,7 +5,7 @@ import {names} from '../names.interface';
 @Component({
   selector: 'app-names-view',
   templateUrl: './names-view.component.html',
-  styleUrls: ['./names-view.component.css']
+  styleUrls: ['./names-view.component.css','./loading.css']
 })
 export class NamesViewComponent implements OnInit {
   namesobj:names ;
@@ -14,6 +14,7 @@ export class NamesViewComponent implements OnInit {
   age:number;
   counter:number =0;
   toomuchclicks:boolean= false;
+  finishloading:boolean = false;
   constructor(private namess:NamesService) {
     namess.getNames().subscribe((data)=>
        {
@@ -23,6 +24,7 @@ export class NamesViewComponent implements OnInit {
                           this.namesobj.randsurname[0] ;
         this.age = Math.floor(Math.random()*80);
         this.isMale = true;
+        this.finishloading=true;
 
 
     });

@@ -1,4 +1,16 @@
-<div class="main-wrapper">
+<div class="loading" *ngIf="!finishloading">
+  <div class="progress container">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</div>
+<div class="main-wrapper" *ngIf="finishloading">
 <div class="circle">
   X
 </div>
