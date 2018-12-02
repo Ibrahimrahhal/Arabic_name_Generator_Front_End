@@ -44,3 +44,33 @@ h2,h3 {
 font-family: Cairo;
 
 }
+.red {
+  color : #da1f26;
+}
+a  , a:link, a:active , a:visited {
+  color:rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+a:hover{
+  transform: rotate(3deg);
+}
+
+button {
+border:0;
+border-style:none;
+outline: 0;
+background-color: #121212;
+color: #ffffff;
+width: 150px;
+height: 40px;
+font-family: "Open Sans";
+cursor: pointer;
+transition:  all 0.2s ease-out;
+border-radius: 5px;
+/* text-transform: uppercase; */
+}
+button:hover {
+transform: rotate(3deg);
+
+}

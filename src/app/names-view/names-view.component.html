@@ -3,6 +3,10 @@
   X
 </div>
 <h2>{{fullname}}</h2>
-<h3>{{gender}}</h3>
-<h4>{{age}}</h4>
+<h3 *ngIf="isMale">ذكر</h3>
+<h3 *ngIf="!isMale">انثى</h3>
+<h3>{{age}}  <span> عام</span> </h3>
+<button (click)="random()">Regenerate</button>
+<h3 class="red" *ngIf="toomuchclicks">
+ تريد اسماء اخرى <a routerLink="/">اضغط هنا</a></h3>
 </div>
