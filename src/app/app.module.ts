@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FirstViewComponent } from './first-view/first-view.component';
 import { NamesViewComponent } from './names-view/names-view.component';
 import { ContactComponent } from './contact/contact.component';
+import { ApiComponent } from './api/api.component';
 // import "rxjs/Observable";
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     FirstViewComponent,
     NamesViewComponent,
-    ContactComponent
+    ContactComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
