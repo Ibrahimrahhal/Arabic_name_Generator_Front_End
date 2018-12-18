@@ -66,6 +66,7 @@ a  , a:link, a:active , a:visited {
   color:rgba(0, 0, 0, 0.8);
   text-decoration: none;
   transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 a:hover{
   transform: rotate(3deg);
@@ -94,7 +95,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin:  0 auto;
-margin-top: 40px;
+height: calc(100vh - 100px);
+/* margin-top: 40px; */
 transition: all 0.3s;
 
 }

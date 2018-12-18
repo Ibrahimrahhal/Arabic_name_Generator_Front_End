@@ -9,7 +9,7 @@ import {names} from './names.interface';
 export class NamesService {
 
 
-  _url = "http://arabic-name-generator.herokuapp.com/";
+  _url = "https://arabic-name-generator.herokuapp.com/";
   constructor(private http:HttpClient) {
   }
   public getNames()

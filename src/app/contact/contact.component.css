@@ -1,0 +1,81 @@
+@keyframes Copied {
+  0%{
+    opacity: 0;
+
+
+  }
+  10%{
+    opacity: 1;
+
+
+  }
+
+  90%{
+    opacity: 1;
+
+
+  }
+  100%{
+    opacity: 0;
+
+
+  }
+
+
+}
+
+h1 {
+font-family: 'Open Sans';
+text-align: center;
+}
+span {
+  display: flex;
+  /* text-align: center; */
+  font-family: 'Open Sans';
+  width: 350px;
+  user-select: none;
+
+}
+div{
+display: flex;
+border:2px #121212 solid;
+border-radius: 7px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 400px;
+height: 45px;
+margin: 0 auto;
+padding: 0 10px 0 0;
+}
+#icon-copy{
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+background-image: url('../../assets/copycontent.svg');
+transition: all 0.3s;
+cursor: pointer;
+}
+#icon-copy:hover {
+transform: scale(1.1);
+
+
+}
+#copied {
+color: #da1f26;
+display: block;
+text-align: center;
+margin:10px auto;
+user-select: none;
+animation: Copied 4s ease-out;
+animation-fill-mode: both;
+}
+
+#myinput{
+padding-left: 10px;
+height: 100%;
+display: flex;
+align-items: center;
+background-color: #121212;
+color: #ffffff;
+}

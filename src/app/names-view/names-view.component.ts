@@ -5,7 +5,7 @@ import {names} from '../names.interface';
 @Component({
   selector: 'app-names-view',
   templateUrl: './names-view.component.html',
-  styleUrls: ['./names-view.component.css','./loading.css']
+  styleUrls: ['./names-view.component.css','./loading.css','./names-view.component.responsive.css']
 })
 export class NamesViewComponent implements OnInit {
   namesobj:names ;
@@ -13,10 +13,25 @@ export class NamesViewComponent implements OnInit {
   isMale:boolean;
   age:number;
   counter:number =0;
-  toomuchclicks:boolean= false;
+  toomuchclicks:boolean= true;
   finishloading:boolean = false;
-  constructor(private namess:NamesService) {
-    namess.getNames().subscribe((data)=>
+  namess:NamesService = null;
+  constructor(private namessz:NamesService) {
+  this.namess = namessz;
+  this.generateNewColl();
+  //   console.log(this.http.getNames());
+  // this.http.getNames().subscribe(data => this.namesobj=data);
+}
+
+  ngOnInit() {
+    // this.fullname = this.namesobj.nmale[0]+this.namesobj.nmale[1]+this.namesobj.surnames[0];
+
+
+  }
+
+  generateNewColl(){
+    this.finishloading=false;
+    this.namess.getNames().subscribe((data)=>
        {
          this.namesobj = data;
          this.fullname =  this.namesobj.randmalename[0]+" "+
@@ -28,25 +43,21 @@ export class NamesViewComponent implements OnInit {
 
 
     });
-  //   console.log(this.http.getNames());
-  // this.http.getNames().subscribe(data => this.namesobj=data);
-}
-
-  ngOnInit() {
-    // this.fullname = this.namesobj.nmale[0]+this.namesobj.nmale[1]+this.namesobj.surnames[0];
-
-
+    this.counter=0;
+    this.toomuchclicks= this.toomuchclicks ? false :true;
   }
-
   random(){
     this.age = Math.ceil(Math.random()*80);
     if(Math.random()>=0.49) {
       this.isMale = true  ;
-      this.fullname =  this.namesobj.randmalename[Math.floor(Math.random()*3)]+" "+
-                       this.namesobj.randmalename[Math.floor(Math.random()*3)]+" "+
+      let xxx=Math.floor(Math.random()*3)
+      let yyy= (1<=xxx)? xxx-1 : 1 ;
+      this.fullname =  this.namesobj.randmalename[xxx]+" "+
+                       this.namesobj.randmalename[yyy]+" "+
                        this.namesobj.randsurname[Math.floor(Math.random()*3)] ;
     } else {
       this.isMale = false  ;
+
       this.fullname =  this.namesobj.randfmalename[Math.floor(Math.random()*3)]+" "+
                        this.namesobj.randmalename[Math.floor(Math.random()*3)]+" "+
                        this.namesobj.randsurname[Math.floor(Math.random()*3)] ;

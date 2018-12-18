@@ -1,0 +1,27 @@
+@media screen and (max-width:700px) {
+  .loading{
+  height: calc(100vh - 200px);
+  }
+  .main-wrapper {
+  width:90%;
+
+  }
+
+  .circle {
+  border: solid 4px #121212 ;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin-top: 50px;
+  font-size: 2.3rem;
+
+  }
+  h2,h3{
+margin: 5px;
+
+  }
+  .margin-top-30px
+  {
+    margin-top: 30px;  }
+
+}

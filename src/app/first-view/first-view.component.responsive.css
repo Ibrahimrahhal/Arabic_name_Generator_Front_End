@@ -1,0 +1,25 @@
+@media screen and (max-width:700px) {
+  h1{
+    font-size: 3rem;
+
+
+  }
+  h2 {
+    font-size: 2rem;
+
+  }
+  a, a:link , a:visited , a:active {
+
+ width: 200px;
+ height: 40px;
+ border-radius: 5px;
+ font-size: 0.8rem;
+
+  }
+  a:hover{
+    width: 240px;
+  }
+
+
+
+}
